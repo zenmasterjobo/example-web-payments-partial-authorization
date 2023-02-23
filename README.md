@@ -1,9 +1,9 @@
-# Web Payments Quickstart
+# Example Web Payments Partial Authorization
 
 [![LICENSE](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://github.com/square/tpl-oss-js/blob/main/LICENSE)
-[![CI](https://github.com/square/web-payments-quickstart/actions/workflows/ci.yml/badge.svg)](https://github.com/square/web-payments-quickstart/actions/workflows/ci.yml)
+[![CI](https://github.com/square/web-payments-quickstart/actions/workflows/ci.yml/badge.svg)](https://github.com/zenmasterjobo/example-web-payments-partial-authorization/actions/workflows/ci.yml)
 
-Quickstart for using Square's Web Payments SDK
+Example application to highlight using
 
 - [Web Payments SDK Overview](https://developer.squareup.com/docs/web-payments/overview).
 - [API Documentation](https://developer.squareup.com/reference/sdks/web/payments).
@@ -13,8 +13,8 @@ Quickstart for using Square's Web Payments SDK
 Start by [cloning](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) this repository.
 
 ```sh
-git clone https://github.com/square/web-payments-quickstart
-cd web-payments-quickstart
+git clone https://github.com/zenmasterjobo/example-web-payments-partial-authorization.git
+cd example-web-payments-partial-authorization
 ```
 
 Install [Node.js (v16)](https://nodejs.org/en/about/releases/) which will include `npm`. This repository contains an `.nvmrc` file if you use [`nvm`](https://github.com/nvm-sh/nvm) to manage your node versions.

@@ -4,10 +4,8 @@
 /* eslint-disable unicorn/import-index */
 /* eslint-disable import/extensions */
 import store from './store/index.js';
-
 import Step from './components/step.js';
 import Terminal from './components/terminal.js';
-
 import {
   createOrder,
   handlePaymentMethodSubmission,
@@ -102,6 +100,7 @@ const copyCreditCard = document.getElementById('square-credit-card');
 const requestTerminal = document.getElementById('request-terminal');
 const responseTerminal = document.getElementById('response-terminal');
 
+// Event listener for the create order button being clicked
 orderButton.addEventListener('click', async () => {
   const result = await createOrder(locationId);
   const item = result.order.lineItems[0];
@@ -114,6 +113,7 @@ orderButton.addEventListener('click', async () => {
   store.dispatch('nextStep', 1);
 });
 
+// Event listener for the complete payment button being clicked
 completePayment.addEventListener('click', async () => {
   completePayment.disabled = true;
   await handleCompletePurchase({
@@ -122,23 +122,26 @@ completePayment.addEventListener('click', async () => {
   });
 });
 
+// Event listener to copy the test credit card number to user's clipboard
 copyGiftCard.addEventListener('click', () => {
   navigator.clipboard.writeText('7783 3200 0000 0000');
   const tooltip = document.getElementById('gcTooltip');
   tooltip.innerHTML = 'Copied';
 });
 
+// Event listener to copy the test gift card to the user's clipboard
 copyCreditCard.addEventListener('click', () => {
   navigator.clipboard.writeText('4111 1111 1111 1111');
   const tooltip = document.getElementById('cardTooltip');
   tooltip.innerHTML = 'Copied';
 });
 
+// Event listener to toggle the size of the request terminal
 requestTerminal.addEventListener('click', () => {
-  console.log('hellooo');
   requestTerminal.classList.toggle('is-active');
 });
 
+// Event listener to toggle the size of the response terminal
 responseTerminal.addEventListener('click', () => {
   responseTerminal.classList.toggle('is-active');
 });
